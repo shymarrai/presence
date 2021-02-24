@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap" rel="stylesheet">
+<title>Presencellca</title>
+</head>
+<body>
+	<main>
+		<div class="colaborators">
+			<h1 style="font-size:1.5rem;height:3rem; margin-top:.5rem">Colaboradores -
+			<span class="leader">Bruno Gomes</span>
+			</h1>
+
+
+			<div class="data">
+				<table id="data-table" class="colaborators-table">
+					<thead>
+						<tr>
+							<th >Nome</th>
+							<th></th>
+							<th> </th>
+							<th></th>
+							<th> </th>	
+							<th > Matricula</th>
+							<th >Equipe</th>
+							<th >Add</th>
+							
+							
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			
+			</div>
+		</div>
+
+		<div class="presence">
+			<h1><a>Presenças</a></h1>
+			<div class="data">
+				<table id="data-presence" class="presence-table">
+					<thead>
+						<tr>
+							<th >Nome</th>
+							<th></th>
+							<th> </th>
+							<th></th>
+							<th> </th>	
+							<th > Matricula</th>
+							<th >Equipe</th>
+							<th >Add</th>
+							
+							
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>	
+			</div>		
+		</div>
+		<div class="ausence">
+			<h1><a>Faltas</a></h1>
+			<div class="data">
+				<table id="data-ausence">
+					<thead>
+						<tr>
+							<th >Nome</th>
+							<th></th>
+							<th> </th>
+							<th></th>
+							<th> </th>	
+							<th > Matricula</th>
+							<th >Equipe</th>
+							<th >Add</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			
+			</div>
+		</div>
+
+	</main>
+			<div class="modal-overlay">
+			
+				<h2>Nova Transação</h2>
+				<button id="ausenceButton" class="f">   Falta   </button>
+				<button id="presenceButton" class="p">Presença</button>
+				<a onclick="Modal.close()" style="cursor:pointer;">Cancelar</span>
+
+			
+		</div>
+	<script src="./script.js">
+	</script>
+</body>
+</html>
