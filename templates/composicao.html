@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel ='icon' href='../static/ELLCA.jpg'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel='author' value='BRUNO GOMES'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+        <title>PRESENCELLCA</title>
+    </head>
+    <body>
+
+        <div id='content' style="display:flex; justify-content:flex-start;">
+            <img src='./static/ELLCA.jpg' alt='ELLCA LOCAÇÕES E SERVIÇOS'>
+            <h1>LOCAÇÕES E SERVIÇOS</h1>
+                <div class='menu'>
+                    <a href='/veiculo'><button class='btnmenu' id='veiculo' value='veiculo'>Veículo</button></a>
+                    <a href='/'><button class='btnmenu' id='colaborador' value='colaboradores'>Colaboradores</button></a>
+                    <a href='/scan'><button class='btnmenu' id='scan' value='scan'>Scan</button></a>
+                    <a href='/composicao'><button class='btnmenu active' id='composicao' value='composicao'>Composicao</button></a>
+                </div>
+
+
+        <div class='composity' >
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>MATRICULA</th>
+                    <th>NOME</th>
+                    <th>FUNCAO</th>
+                    <th>EQUIPE</th>
+                    <th>DATA</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for colaborador in composicao %}
+                <tr>
+                  <td >{{ colaborador[1] }}</td>
+                  <td >{{ colaborador[2] }}</td>
+                  <td >{{ colaborador[3] }}</td>
+                  <td >{{ colaborador[4] }}</td>
+                  <td >{{ colaborador[5] }}</td>
+                </tr>
+                </tbody>
+                {% endfor %}
+            </table>
+
+        </div>
+
+
+        </div>
+
+    <foorter>
+        Created By<a href='https://github.com/shymarrai' target='__blank'> Bruno Gomes</a>
+    </foorter>
+    </body>
+</html>

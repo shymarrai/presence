@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel ='icon' href='../static/ELLCA.jpg'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel='author' value='BRUNO GOMES'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+        <title>PRESENCELLCA</title>
+    </head>
+    <body>
+
+        <div id='content'>
+            <img src='./static/ELLCA.jpg' alt='ELLCA LOCAÇÕES E SERVIÇOS'>
+            <h1>LOCAÇÕES E SERVIÇOS</h1>
+                <div class='menu'>
+                    <a href='/veiculo'><button class='btnmenu ' id='veiculo' value='veiculo'>Veículo</button></a>
+                    <a href='/'><button class='btnmenu active' id='colaborador' value='colaboradores'>Colaboradores</button></a>
+                    <a href='/scan'><button class='btnmenu' id='scan' value='scan'>Scan</button></a>
+                    <a href='/composicao'><button class='btnmenu' id='composicao' value='composicao'>Composicao</button></a>
+                </div>
+            <form method='POST' id='formulario' action='/'>
+
+                <label for='nome'>Nome</label>
+                <input id='nome' type="text" name='nome' />
+
+                <label for='matricula'>Matricula</label>
+                <input type='text' id="matricula" name="matricula" maxlength="7" pattern="[0-9]+$" onblur="GerarCódigoDeBarras(this)">
+
+                <label for='funcao'>Função</label>
+                <input id='funcao' type="text" name='funcao' />
+
+                <input onclick="check()" type="submit" value="CADASTRAR!">
+                <div id='bar'>
+                    <svg id="codBarras" ></svg>
+                </div>
+            </form>
+
+
+        </div>
+
+    <foorter>
+        Created By<a href='https://github.com/shymarrai' target='__blank'>Bruno Gomes</a>
+    </foorter>
+    </body>
+<script>
+
+
+    function GerarCódigoDeBarras(elementoInput){
+        /*A função JsBarcode não aceita string vazia*/
+        if(!elementoInput.value){
+            elementoInput.value = '';
+        }
+        let config = {
+            lineColor:'#000'
+        }
+        JsBarcode('#codBarras', elementoInput.value, config);
+    }
+
+
+    function check(){
+        nome = document.getElementById('nome').value
+        matricula = document.getElementById('matricula').value
+        funcao = document.getElementById('funcao').value
+
+        if(nome.length < 1){
+            alert("CAMPO NOME VAZIO")
+        }else if(funcao.length < 1){
+            alert("CAMPO FUNÇÃO VAZIO")
+        }else if(matricula.length < 1){
+            alert("CAMPO MATRICULA VAZIO")
+        }else{
+           window.print()
+           console.log('imprimir')
+        }
+
+
+
+        }
+
+
+
+
+
+
+
+</script>
+
+</html>

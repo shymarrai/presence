@@ -1,0 +1,217 @@
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#93dbff;
+}
+div#content{
+    top:0;
+    flex-direction:column;
+    position:absolute;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width: 60vw;
+    background:#fff;
+    min-height:100vh;
+    font-family: 'Roboto', sans-serif;
+
+}
+thead tr th{
+    padding:2rem;
+}
+
+tbody tr td{
+    background:#f3f3f3;
+    font-size: .9rem;
+    padding:.5rem;
+}
+
+
+tbody tr td:nth-child(1), thead tr th:nth-child(1){
+    max-width:4rem;
+
+    text-align:center;
+    padding: 0 2rem;
+}
+tbody tr td:nth-child(even){
+    background:#9eeaff;
+}
+tbody tr td:nth-child(odd){
+    text-align:center;
+    background:#7accff;
+}
+.value{
+
+font-family: 'Roboto', sans-serif;
+text-transform: uppercase;
+color: tomato;
+}
+div.menu{
+    width:100vw;
+    font-family: 'Roboto', sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+
+}
+.btnmenu{
+    cursor:pointer;
+    width:7rem;
+    height:1.8rem;
+    border: none;
+    background:#6bd0ff;
+    font-family: 'Roboto', sans-serif;
+}
+.btnmenu:hover{
+    border:2px solid #000;
+}
+.active{
+    background:#D0D5CE;
+}
+form{
+    margin-top:3rem;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+}
+.info{
+text-align:left;
+background:#e1e1e1;
+padding:2rem;
+width:80%;
+font-family: 'Roboto', sans-serif;
+text-transform: uppercase;
+
+}
+foorter{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:rgba(0,0,0,0);
+    display:flex;
+    justify-content:center;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration:none;
+    color:#777;
+}
+input[type='text']{
+    border:2px solid #085e93;
+    height:2rem;
+    border-radius:10px;
+    width:15rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+    text-transform: uppercase;
+
+}
+label{
+    margin-right:150px;
+    position:relative;
+    display:initial;
+    font-family: 'Roboto', sans-serif;
+
+}
+input{
+    outline:none;
+
+}
+
+h1{
+    color:#000;
+    z-index:2;
+    font-size:1rem;
+    margin-bottom:2rem;
+    color: #085ebb;
+    font-family: 'Roboto', sans-serif;
+
+}
+img{
+    z-index:2;
+    top:0;
+    position:relative;
+    display:block;
+}
+
+
+input[type='submit']{
+    height:3rem;
+    width: 6rem;
+    margin:2rem;
+    border:none;
+    border-bottom: 3px solid #4c9abf;
+    box-shadow: 2px 1px 5px #888;
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    background: #6bd0ff;
+    cursor:pointer;
+
+}
+
+
+input[type='submit']:focus{
+    background:#6bdcff;
+    box-shadow: 0px 8px 6px -10px #000;
+    border:none;
+    height:2.9rem;
+    width:5.9rem;
+
+}
+/*INPUT DATE ESTILIZAÇÃO*/
+
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+    display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #2c3e50;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+    appearance: none;
+    -webkit-appearance: none;
+    color: #95a5a6;
+    font-family: "Helvetica", arial, sans-serif;
+    font-size: 18px;
+    border:2px solid #085e93;
+    background:#ecf0f1;
+    padding:5px;
+    display: inline-block ;
+
+}
+
+input[type="date"], focus {
+    color: #95a5a6;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+}
+
+@media print{
+    body * {
+        visibility:hidden;
+    }
+
+    #bar, #bar *{
+    visibility:visible;
+}
+#bar{
+    position: fixed;
+    left:0;
+    top:0;
+}
+}

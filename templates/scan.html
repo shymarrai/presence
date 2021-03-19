@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/jsbarcode/3.6.0/JsBarcode.all.min.js"></script>
+        <link rel="stylesheet" href="../static/style.css">
+        <link rel ='icon' href='../static/ELLCA.jpg'>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel='author' value='BRUNO GOMES'>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
+        <title>PRESENCELLCA</title>
+    </head>
+    <body>
+
+        <div id='content'>
+            <img src='./static/ELLCA.jpg' alt='ELLCA LOCAÇÕES E SERVIÇOS'>
+            <h1>LOCAÇÕES E SERVIÇOS</h1>
+                <div class='menu'>
+                    <a href='/veiculo'><button class='btnmenu ' id='veiculo' value='veiculo'>Veículo</button></a>
+                    <a href='/'><button class='btnmenu' id='colaborador' value='colaboradores'>Colaboradores</button></a>
+                    <a href='/scan'><button class='btnmenu active' id='scan' value='scan'>Scan</button></a>
+                    <a href='/composicao'><button class='btnmenu' id='composicao' value='composicao'>Composicao</button></a>
+                </div>
+            <form method='POST' id='formulario' action='/scan' style="height:26rem; display:flex; justify-content:flex-start;">
+
+                <label for='scan'>SCAN </label>
+                <input id='scan' type="text" name='scan' onKeyPress="submitenter(this,event)" autofocus/>
+                {% if equipe %}
+                <input type='text' value='{{equipe}}' name='equipe' readonly="readonly">
+                {% else %}
+                <input type='text' value='SEM EQUIPE' name='equipe' readonly="readonly">
+                {% endif %}
+
+                <div class='info'>
+
+                    {%  if placa %}
+                        <span>PLACA: </span><span class='value'>{{ placa }}</span><br>
+                        <span>ORDEM: </span><span class='value'>{{ ordem }}</span><br>
+                        <span>TIPO: </span><span class='value'>{{ tipo }}</span><br>
+                        <span>EQUIPE:</span><span class='value'>{{ equipe }}</span><br>
+                        <span>DATA:</span><span class='value'>{{ data }}</span><br>
+                    {%  endif %}
+                    {%  if nome %}
+                        <span>NOME: </span><span class='value'>{{ nome }}</span><br>
+                        <span>MATRICULA: </span><span class='value'>{{ matricula }}</span><br>
+                        <span>FUNCAO: </span><span class='value'>{{ funcao }}</span><br>
+                        <span>EQUIPE:</span><span class='value'>{{ equipe }}</span><br>
+                        <span>DATA:</span><span class='value'>{{ data }}</span><br>
+                    {%  endif %}
+
+
+                </div>
+
+            </form>
+
+
+
+
+
+        </div>
+
+    <foorter>
+        Created By<a href='https://github.com/shymarrai' target='__blank'>Bruno Gomes</a>
+    </foorter>
+    </body>
+<script>
+
+        function submitenter(myfield,e){
+
+            var keycode;
+            if (window.event) keycode = window.event.keyCode;
+            else if (e) keycode = e.which;
+            else return true;
+
+            if (keycode == 13)
+            {
+            myfield.form.submit();
+            return false;
+            }
+            else
+            return true;
+            }
+
+
+
+
+
+</script>
+
+</html>
