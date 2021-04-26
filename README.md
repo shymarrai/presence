@@ -21,5 +21,14 @@ A web system for registering employees and vehicles for administrative recogniti
 &nbsp;
 <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python">&nbsp;
 
+##Screens
+
+<img src="https://github.com/shymarrai/presence/blob/main/screens/colabs.png" >
+<img src="https://github.com/shymarrai/presence/blob/main/screens/colabs%20preenchido.png" >
+<img src="https://github.com/shymarrai/presence/blob/main/screens/veiculos.png" >
+<img src="https://github.com/shymarrai/presence/blob/main/screens/veiculos%20preenchido.png" >
+<img src="https://github.com/shymarrai/presence/blob/main/screens/scan.png" >
+<img src="https://github.com/shymarrai/presence/blob/main/screens/composicao.png" >
+
 
 
